@@ -5,9 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "Delete users!"
+User.destroy_all
+puts "Delete projects!"
+Project.destroy_all
+
+
 
 require 'faker'
 
 50.times do
   User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, age: rand(13..100))
 end
+
+50.times do 
+  Project.create(name: Faker::Company.name, description: Faker::Company.catch_phrase)
+end
+
