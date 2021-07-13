@@ -1,4 +1,17 @@
 <h1><%= @user.first_name %> <%= @user.last_name %> Details: </h1>
 
 <p>Age: <%= @user.age %></p>
-<p>User_ID: <%= @user.id %></p>
+<p>Id: <%= @user.id %></p>
+
+<p>Songs:</p>
+<% selected = @user_projects.select do |up| %>
+  <% up.user_id == @user.id %>
+<% end %>
+
+<ul>
+  <% selected.each do |select| %>
+    <li><%= link_to(select.project.name, project_path(select.project)) %></li>
+  <% end %>
+</ul>
+
+<%= link_to("View All Users", users_path) %>
