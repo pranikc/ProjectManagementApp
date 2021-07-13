@@ -9,6 +9,8 @@ puts "Delete users!"
 User.destroy_all
 puts "Delete projects!"
 Project.destroy_all
+puts "Delete user projects!"
+UserProject.destroy_all
 
 
 
@@ -20,5 +22,9 @@ end
 
 50.times do 
   Project.create(name: Faker::Company.name, description: Faker::Company.catch_phrase)
+end
+
+50.times do
+  UserProject.create(user_id: User.ids.sample, project_id: Project.ids.sample)
 end
 
