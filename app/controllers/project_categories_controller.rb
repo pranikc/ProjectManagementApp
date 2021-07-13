@@ -5,5 +5,6 @@ class ProjectCategoriesController < ApplicationController
 
   def show
     @project_category = ProjectCategory.find_by(id: params[:id])
+    @user_projects = UserProject.all
   end
 end

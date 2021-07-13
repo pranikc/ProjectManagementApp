@@ -26,8 +26,8 @@ end
   Project.create(name: Faker::Music::RockBand.song, description: Faker::Music.album)
 end
 
-50.times do
-  ProjectCategory.create(category_type: Faker::Music.genre, user_id: User.ids.sample)
+10.times do
+  ProjectCategory.create(category_type: Faker::Music.unique.genre)
 end
 
 50.times do

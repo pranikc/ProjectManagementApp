@@ -1,5 +1,16 @@
-<h1>Project Category</h1>
+<h1>Artists</h1>
 
-<ol>
-  <li><%= @project_category.user_id %></li>
-</ol>
+<%= @project_category.category_type %>
+<% selected_user_projects = @user_projects.select do |up| %>
+  <% up.project_category_id == @project_category.id %>
+<% end %>
+
+<ul>
+  <% found = [] %>
+  <% selected_user_projects.each do |selected| %>
+    <% if found.include?(selected.user) == false %>
+      <li><%= link_to(selected.user.first_name.to_s + " " + selected.user.last_name.to_s, user_path(selected.user)) %></li>
+      <% found << selected.user %>
+    <% end %>
+  <% end %>
+</ul>
