@@ -1,0 +1,7 @@
+<h1>Project Categories:</h1>
+
+<ul>
+  <% @project_categories.each do |pc| %>
+    <li><%= link_to(pc.category_type, project_category_path(pc)) %></li>
+  <% end %>
+</ul>
