@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   end
 
   def like
-    @user = user.find(params[:user_id])
+    @user = User.find(params[:user_id])
     @user.likes += 1
     @user.save
 

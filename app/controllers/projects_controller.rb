@@ -12,7 +12,7 @@ class ProjectsController < ApplicationController
     end
 
     def like
-        @project = project.find(params[:project_id])
+        @project = Project.find(params[:project_id])
         @project.likes += 1
         @project.save
 

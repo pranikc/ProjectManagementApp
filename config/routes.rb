@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :user_projects
   resources :project_categories
 
-  post "/likes", to: "users#likes"
+  post "/like_project/:project_id", to: "projects#like", as: "like_project"
+  post "/like_user/:user_id", to: "users#like", as: "like_user"
 end
