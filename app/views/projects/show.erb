@@ -1,7 +1,7 @@
 <h1>Song Title: <%= @project.name %></h1>
 
 <h3>From : <%= @project.description %></h3>
-<h4>Genre: <%= UserProject.find_by_project_id(@project.id).project_category.category_type %></h4>
+<h4>Genre: <%= link_to(UserProject.find_by_project_id(@project.id).project_category.category_type, project_category_path(UserProject.find_by_project_id(@project.id).project_category)) %></h4>
 <h4>Likes: <%= @project.likes %></h4>
 <h4>Views: <%= @project.views %></h4>
 

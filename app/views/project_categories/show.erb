@@ -1,6 +1,5 @@
-<h1>Artists</h1>
+<h1>List of <%= @project_category.category_type %> Artists</h1>
 
-<%= @project_category.category_type %>
 <% selected_user_projects = @user_projects.select do |up| %>
   <% up.project_category_id == @project_category.id %>
 <% end %>
