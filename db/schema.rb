@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 2021_07_13_201538) do
   create_table "projects", force: :cascade do |t|
     t.string "name"
     t.text "description"
+    t.integer "likes"
+    t.integer "views"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -37,6 +39,8 @@ ActiveRecord::Schema.define(version: 2021_07_13_201538) do
     t.string "first_name"
     t.string "last_name"
     t.integer "age"
+    t.integer "likes"
+    t.integer "views"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
