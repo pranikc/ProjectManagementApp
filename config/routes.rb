@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :projects
   resources :user_projects
   resources :project_categories
+
+  post "/likes", to: "users#likes"
 end
