@@ -19,14 +19,14 @@ ProjectCategory.destroy_all
 require 'faker'
 
 50.times do
-  User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, age: rand(13..100), likes: rand(1..1000), views: rand(1..1000))
+  User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, age: rand(13..100), likes: rand(1..1000), views: rand(1..1000), plays: rand(1..10000))
 end
 
 50.times do
-  Project.create(name: Faker::Music::RockBand.song, description: Faker::Music.album, likes: rand(1..1000), views: rand(1..1000))
+  Project.create(name: Faker::Music::RockBand.song, description: Faker::Music.album, likes: rand(1..1000), views: rand(1..1000), plays: rand(1..10000))
 end
 
-50.times do
+15.times do
   ProjectCategory.create(category_type: Faker::Music.unique.genre)
 end
 

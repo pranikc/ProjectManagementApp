@@ -5,6 +5,7 @@ class CreateProjects < ActiveRecord::Migration[6.1]
       t.text :description
       t.integer :likes
       t.integer :views
+      t.integer :plays
       t.timestamps
     end
   end

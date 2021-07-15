@@ -1,0 +1,32 @@
+  
+<h1>Sign up</h1>
+
+<% if flash[:errors] %>
+    <ul>
+        <% flash[:errors].each do |error| %>
+            <li> <%= error %></li>
+        <% end %>
+    </ul>
+<% end %>
+<%= form_for @user do |f| %>
+
+   <%= f.label :first_name %>
+<%= f.text_field :first_name %> <br>
+
+<%= f.label :last_name %>
+<%= f.text_field :last_name %> <br>
+
+<%= f.label :age %>
+<%= f.text_field :age %> <br>
+
+<%= f.label :likes %>
+<%= f.text_field :likes %> <br>
+
+<%= f.label :views %>
+<%= f.text_field :views %> <br>
+
+<%= f.label :plays %>
+<%= f.text_field :plays %> <br>
+
+<%= f.submit "Create Your Profile" %>
+<% end %>

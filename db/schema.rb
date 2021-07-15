@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2021_07_13_201538) do
     t.text "description"
     t.integer "likes"
     t.integer "views"
+    t.integer "plays"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -41,6 +42,7 @@ ActiveRecord::Schema.define(version: 2021_07_13_201538) do
     t.integer "age"
     t.integer "likes"
     t.integer "views"
+    t.integer "plays"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
