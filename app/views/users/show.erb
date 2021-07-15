@@ -19,3 +19,10 @@
 
 <%= link_to("View All Artists", users_path) %>
 
+<h3>Highlights:</h3>
+
+<p><%= link_to "Most Viewed Song", project_path(@user.most_viewed_songs) %></p>
+<p><%= link_to "Most Liked Song", project_path(@user.most_liked_songs) %></p>
+<p><%= link_to "Least Liked Song", project_path(@user.least_liked_songs) %></p>
+<p><%= link_to "Least Viewed Song", project_path(@user.least_viewed_songs) %></p>
+

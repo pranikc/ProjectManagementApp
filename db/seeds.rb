@@ -26,7 +26,7 @@ end
   Project.create(name: Faker::Music::RockBand.song, description: Faker::Music.album, likes: rand(1..1000), views: rand(1..1000))
 end
 
-10.times do
+50.times do
   ProjectCategory.create(category_type: Faker::Music.unique.genre)
 end
 
