@@ -8,17 +8,14 @@ This Project was created using Ruby on Rails, with some use of JavaScript, CSS, 
 Non-user generated data was created from the Ruby gem Faker.
 
 Gems
-sinatra-activerecord - for accessing databases
-sqlite3 - for database management
-pry - for debugging during development
-require_all - for accessing files from within different directories of the program
-faker - for generating random data
-tty-prompt - for accepting user inputs in different formats
-tty-table - for displaying data in a table
-tty-box - for displaying data in a box
-tty-font - for creating the Raven logo that appears at the start of the program
+* sinatra-activerecord - for accessing databases
+* sqlite3 - for database management
+* require_all - for accessing files from within different directories of the program
+* faker - for generating random data
+* 
 
-Setup Instructions
+
+<h1>Setup Instructions</h1>
 NOTE: Make sure you have properly installed Ruby on your terminal. Follow the instructions below after verifying that you have correctly installed ruby through the following command. It should return a Ruby version if you have Ruby installed.
 
 ruby --version
