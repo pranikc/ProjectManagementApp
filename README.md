@@ -1,6 +1,6 @@
 # README
 
-Soundlite
+<h1>Soundlite</h1>
 
 A music database that allows you to stream some of your favorite songs -  developed by Pranik Chainani and Mohamed Mohamud
 
