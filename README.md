@@ -51,3 +51,5 @@ To navigate to our index page after running the rails server, input
 http://127.0.0.1:2000/users
 ```
 
+This will give you access to a list of users using our soundlite service. From here, you can navigate to user profile pages, and see the various songs and projects our users have made.  
+
