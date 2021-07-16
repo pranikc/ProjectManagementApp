@@ -6,6 +6,7 @@
 <h4>Views: <%= @project.views %></h4>
 <h4>Plays: <%= @project.plays %></h4>
 
+
 <% selected_user_projects = @user_projects.select do |up| %>
   <% up.project_id == @project.id %>
 <% end %>
@@ -21,5 +22,9 @@ By: <ul>
 </ul>
 
 <%= button_to "Add a like", like_project_path(@project) %>
+
+
+
+
 
 <%= link_to("View all Projects", projects_path) %>

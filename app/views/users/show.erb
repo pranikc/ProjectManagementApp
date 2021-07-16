@@ -1,9 +1,10 @@
 <h1><%= @user.first_name %> <%= @user.last_name %> Details: </h1>
 
 <p>Age: <%= @user.age %></p>
-<p>Likes: <%= @user.likes %></p>
+<p>Artist Likes: <%= @user.likes %></p>
 <p>Views: <%= @user.views %></p>
 <p>Plays: <%= @user.plays %></p>
+<p>Average of All Song Likes: <%= @user.average_song_likes_of_artist %></p>
 
 
 <p>Songs:</p>
@@ -27,4 +28,8 @@
 <p><%= link_to "Most Liked Song", project_path(@user.most_liked_songs) %></p>
 <p><%= link_to "Least Liked Song", project_path(@user.least_liked_songs) %></p>
 <p><%= link_to "Least Viewed Song", project_path(@user.least_viewed_songs) %></p>
+<p><%= link_to "Most Played Song", project_path(@user.most_played_songs) %></p>
+<p><%= link_to "Least Played Song", project_path(@user.least_played_songs) %></p>
 
+
+<%= button_to "Edit Profile", {action: "edit", method: :get} %>

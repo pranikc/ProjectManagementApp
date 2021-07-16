@@ -13,19 +13,19 @@ class CreateUsers < ActiveRecord::Migration[6.1]
   end
 end
 
-<%= f.label :first_name %>
-<%= f.text_field :first_name %> <br>
+# <%= f.label :first_name %>
+# <%= f.text_field :first_name %> <br>
 
-<%= f.label :last_name %>
-<%= f.text_field :last_name %> <br>
+# <%= f.label :last_name %>
+# <%= f.text_field :last_name %> <br>
 
-<%= f.label :likes %>
-<%= f.text_field :likes %> <br>
+# <%= f.label :likes %>
+# <%= f.text_field :likes %> <br>
 
-<%= f.label :views %>
-<%= f.text_field :views %> <br>
+# <%= f.label :views %>
+# <%= f.text_field :views %> <br>
 
-<%= f.label :plays %>
-<%= f.text_field :plays %> <br>
+# <%= f.label :plays %>
+# <%= f.text_field :plays %> <br>
 
-<%= f.submit "Create Your Profile" %>
+# <%= f.submit "Create Your Profile" %>

@@ -1,0 +1,26 @@
+<h1>Edit your song</h1>
+
+<% if flash[:errors] %>
+    <ul>
+        <% flash[:errors].each do |error| %>
+            <li> <%= error %></li>
+        <% end %>
+    </ul>
+<% end %>
+<%= form_for Project.new do |f| %>
+
+   <%= f.label :name %>
+<%= f.text_field :name %> <br>
+
+<%= f.label :description %>
+<%= f.text_field :description %> <br>
+
+<%= f.label "Audio File" %>
+<%= f.text_field :song_file %> <br>
+
+
+
+
+
+<%= f.submit "Upload Your Song" %>
+<% end %>
