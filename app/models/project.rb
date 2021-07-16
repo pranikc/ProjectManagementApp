@@ -6,7 +6,6 @@ class Project < ApplicationRecord
     belongs_to :like
 
     def is_saved_like?
-      puts self.like.is_liked
       if self.like.is_liked == true
         return true
       else
