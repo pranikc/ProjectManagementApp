@@ -9,7 +9,7 @@ class UserProjectsController < ApplicationController
         @users = User.all
         @project_categories = ProjectCategory.all
         @project = @user_project.build_project
-    end 
+    end
 
     def create
         @user_project = UserProject.create(user_project_params)
@@ -19,12 +19,12 @@ class UserProjectsController < ApplicationController
           flash[:errors] = @user_project.errors.full_messages
           redirect_to new_user_project_path
       end
-    
+
     end
 
     def show
         @user_project = UserProject.find_by(id: params[:id])
-        
+
     end
 
     private

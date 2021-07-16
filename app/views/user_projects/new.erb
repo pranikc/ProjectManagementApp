@@ -10,29 +10,29 @@
 <%= form_for @user_project do |f| %>
 
 
-Projects:
+Song
     <%= f.fields_for :project do |projects_form| %>
         <%= projects_form.label :name %>
-        <%= projects_form.text_field :name %>
-       
+        <%= projects_form.text_field :name, required: true %><br>
+
         <%= projects_form.label :description %>
-        <%= projects_form.text_field :description %>
+        <%= projects_form.text_field :description, required: true %><br>
 
          <%= projects_form.label :likes %>
-        <%= projects_form.text_field :likes %>
+        <%= projects_form.text_field :likes, value: 0 %><br>
 
          <%= projects_form.label :views %>
-        <%= projects_form.text_field :views %>
+        <%= projects_form.text_field :views, value: 0 %><br>
 
          <%= projects_form.label :plays %>
-        <%= projects_form.text_field :plays %>
-    <% end %>
+        <%= projects_form.text_field :plays, value: 0 %><br>
+    <% end %><br>
 
-<%= f.label :user_id %> %>
-<%= f.collection_select(:user_id,@users,:id,:full_name) %> <br> %> %>
+<%= f.label :user_id %>
+<%= f.collection_select(:user_id,@users,:id,:full_name) %> <br>
 
-<%= f.label :project_category_id %> %>
-<%= f.collection_select(:project_category_id,@project_categories,:id,:category_type) %> <br> %> %>
+<%= f.label :project_category_id %>
+<%= f.collection_select(:project_category_id,@project_categories,:id,:category_type) %> <br>
 
 <%= f.label :song_file %>
 <%= f.file_field :song_file %> <br>

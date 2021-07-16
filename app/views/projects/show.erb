@@ -21,7 +21,7 @@ By: <ul>
   <% end %>
 </ul>
 
-<%= button_to "Add a like", like_project_path(@project) %>
+<%= button_to "Add a like", like_project_path(@project), :disabled => @project.is_saved_like? %>
 
 
 

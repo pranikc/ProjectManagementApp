@@ -7,8 +7,7 @@ class ProjectsController < ApplicationController
     def new
         @project = Project.new
         @project_categories = ProjectCategory.all
-        @user_project = new
-        
+        @user_project = UserProject.new
     end
 
     def show
@@ -29,7 +28,7 @@ class ProjectsController < ApplicationController
           redirect_to new_project_path
       end
     end
-    
+
 
     def like
         @project = Project.find(params[:project_id])
@@ -39,7 +38,7 @@ class ProjectsController < ApplicationController
         redirect_to project_path(@project)
     end
 
-    
+
 
 
     private

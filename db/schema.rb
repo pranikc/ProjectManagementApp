@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_15_232952) do
+ActiveRecord::Schema.define(version: 2021_07_16_094241) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -40,6 +40,12 @@ ActiveRecord::Schema.define(version: 2021_07_15_232952) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "likes", force: :cascade do |t|
+    t.boolean "is_liked"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "project_categories", force: :cascade do |t|
     t.string "category_type"
     t.datetime "created_at", precision: 6, null: false
@@ -52,6 +58,7 @@ ActiveRecord::Schema.define(version: 2021_07_15_232952) do
     t.integer "likes"
     t.integer "views"
     t.integer "plays"
+    t.integer "like_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
