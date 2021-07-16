@@ -30,7 +30,7 @@ class UserProjectsController < ApplicationController
     private
 
     def user_project_params
-        params.require(:user_project).permit(:user_id, :project_category_id, project_attributes: [:id, :name, :description, :likes, :views, :plays])
+        params.require(:user_project).permit(:user_id, :project_category_id, :song_file, project_attributes: [:id, :name, :description, :likes, :views, :plays])
     end
 
 end
