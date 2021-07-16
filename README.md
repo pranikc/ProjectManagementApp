@@ -12,7 +12,6 @@ Gems
 * sqlite3 - for database management
 * require_all - for accessing files from within different directories of the program
 * faker - for generating random data
-* 
 
 
 <h1>Setup Instructions</h1>
