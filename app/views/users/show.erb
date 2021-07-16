@@ -19,8 +19,7 @@
 </ul>
 
 <%= button_to "Add a like", like_user_path(@user) %>
-
-<%= link_to("View All Artists", users_path) %>
+<br>
 
 <h3>Highlights:</h3>
 
@@ -32,4 +31,6 @@
 <p><%= link_to "Least Played Song", project_path(@user.least_played_songs) %></p>
 
 
-<%= button_to "Edit Profile", {action: "edit", method: :get} %>
+<br><br><br>
+<%= link_to "Edit Profile", edit_user_path(@user) %><br>
+<%= link_to("View All Artists", users_path) %>

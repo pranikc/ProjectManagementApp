@@ -2,13 +2,14 @@
 
 
 
- if flash[:errors] %>
+ <% if flash[:errors] %>
     <ul>
         <% flash[:errors].each do |error| %>
             <li> <%= error %></li>
         <% end %>
     </ul>
 <% end %>
+
 <%= form_for @user do |f| %>
     <%= f.label :first_name %>
     <%= f.text_field :first_name %> <br>
@@ -19,7 +20,7 @@
     <%= f.label :age %>
     <%= f.text_field :age %> <br>
 
-   
+
 
     <%= f.submit "Update your profile" %>
 <% end %>

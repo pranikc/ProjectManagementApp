@@ -15,8 +15,21 @@ class UsersController < ApplicationController
       flash[:errors] = @user.errors.full_messages
       redirect_to new_user_path
   end
-
 end
+
+  def edit
+    @user = User.find_by(id: params[:id])
+  end
+
+  def update
+    @user = User.find_by(id: params[:id])
+
+    if @user.update(:first_name=> params[:user][:first_name], :last_name=> params[:user][:last_name], :age=> params[:user][:age])
+      redirect_to user_path(@user)
+    else
+      render 'edit'
+    end
+  end
 
   def show
     @user = User.find_by(id: params[:id])
@@ -38,6 +51,4 @@ end
   def user_params
     params.require(:user).permit(:first_name, :last_name, :age, :likes, :views, :plays)
   end
-
-
 end
